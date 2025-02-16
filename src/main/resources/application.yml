@@ -1,0 +1,26 @@
+spring:
+
+  application:
+    name : Task manager API
+
+  datasource:
+    url : jdbc:h2:mem:document_db;DB_CLOSE_DELAY=-1
+    username : sa
+    password : 2212
+
+  jpa:
+    show-sql : true
+    hibernate:
+      ddl-auto : update
+      naming:
+        physical-strategy : org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL : DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder : TRACE
